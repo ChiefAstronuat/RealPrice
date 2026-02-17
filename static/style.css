@@ -1,0 +1,15 @@
+body{font-family:Arial,sans-serif;margin:0;background:#fafafa;color:#222}
+.sticky{position:sticky;top:0;background:#fff;padding:12px;border-bottom:1px solid #ddd;z-index:2}
+.filters{display:flex;gap:10px;flex-wrap:wrap}
+select,label{padding:6px}
+main{padding:16px;max-width:1200px;margin:0 auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.card{background:#fff;padding:12px;border:1px solid #ddd;border-radius:8px}
+.card p{font-size:22px;font-weight:700;margin:6px 0}
+.badge{font-size:11px;background:#f2c94c;padding:2px 6px;border-radius:10px}
+.chart-wrap{margin-top:16px;background:#fff;border:1px solid #ddd;border-radius:8px;padding:12px}
+#chart{width:100%;height:auto}
+.hint{font-size:12px;color:#666}
+details{margin-top:14px;background:#fff;border:1px solid #ddd;border-radius:8px;padding:10px}
+table{width:100%;border-collapse:collapse}
+th,td{border-bottom:1px solid #eee;padding:6px;text-align:left;font-size:14px}

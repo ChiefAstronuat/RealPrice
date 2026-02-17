@@ -1,0 +1,22 @@
+[
+  {
+    "region_id": "11",
+    "region_name": "전국",
+    "level": "si_do"
+  },
+  {
+    "region_id": "26",
+    "region_name": "부산",
+    "level": "si_do"
+  },
+  {
+    "region_id": "27",
+    "region_name": "대구",
+    "level": "si_do"
+  },
+  {
+    "region_id": "41",
+    "region_name": "경기",
+    "level": "si_do"
+  }
+]
