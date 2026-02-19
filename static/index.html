@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RealPrice - Sweetpotato</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header class="sticky">
+    <h1>/sweetpotato</h1>
+    <div class="filters">
+      <select id="region"></select>
+      <select id="spec"></select>
+      <select id="range">
+        <option value="14">14일</option>
+        <option value="30">30일</option>
+        <option value="90" selected>90일</option>
+        <option value="365">1년</option>
+        <option value="9999">전체</option>
+      </select>
+      <select id="mode">
+        <option value="final">확정</option>
+        <option value="both" selected>잠정+확정</option>
+        <option value="retail">소매(평균)</option>
+      </select>
+      <label><input type="checkbox" id="band" /> p10~p90</label>
+      <label><input type="checkbox" id="smooth" /> 7일 중앙값(±3)</label>
+    </div>
+  </header>
+
+  <main>
+    <section class="cards">
+      <div class="card">
+        <h3>확정가(final)</h3>
+        <p id="final">-</p>
+        <small id="delta">-</small>
+      </div>
+      <div class="card">
+        <h3>잠정가(nowcast) <span class="badge">최근 3일</span></h3>
+        <p id="nowcast">-</p>
+      </div>
+      <div class="card">
+        <h3>신뢰도/범위</h3>
+        <p id="confidence">-</p>
+        <small id="rangeText">-</small>
+      </div>
+      <div class="card">
+        <h3>최신성(as-of)</h3>
+        <p id="asof">-</p>
+        <small id="note">확정은 보통 T+3일 반영, 최근 3일은 잠정치</small>
+      </div>
+    </section>
+
+    <section class="chart-wrap">
+      <canvas id="chart" width="1200" height="420"></canvas>
+      <p class="hint">최근 3일은 잠정 구간(음영 처리)</p>
+    </section>
+
+    <details>
+      <summary>시장별 분포 (상위 10개)</summary>
+      <table id="marketTable">
+        <thead><tr><th>시장</th><th>중앙값</th><th>거래량(kg)</th><th>p10/p90</th><th>trades</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </details>
+
+    <details>
+      <summary>데이터 출처/갱신 주기/제한</summary>
+      <ul>
+        <li>도매 확정/잠정: 공영도매시장 정산·실시간 경매 기반</li>
+        <li>소매 평균: KAMIS 평균 지표(개별 판매처 가격과 다를 수 있음)</li>
+        <li>일부 항목은 추정치이며 API 키 연동 전까지 샘플 데이터로 동작</li>
+      </ul>
+    </details>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

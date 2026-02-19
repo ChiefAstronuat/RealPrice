@@ -1,0 +1,16 @@
+[
+  {
+    "spec_id": "SP001",
+    "label": "고구마(일반계) 상품, KRW/kg",
+    "grade": "상품",
+    "variety": "일반계",
+    "unit": "KRW/kg"
+  },
+  {
+    "spec_id": "SP002",
+    "label": "고구마(밤) 상품, KRW/kg",
+    "grade": "상품",
+    "variety": "밤고구마",
+    "unit": "KRW/kg"
+  }
+]
